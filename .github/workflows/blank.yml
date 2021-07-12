@@ -11,4 +11,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run a one-line script
-      run: curl https://www.golem.de/
+      run: curl -v https://www.golem.de/
