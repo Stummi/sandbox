@@ -9,4 +9,5 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: check label
-        run: "! jq -e '.pull_request.labels[] | select( .name == \"do not merge yet\")'"
+        run: |
+          ! jq -e '.pull_request.labels[] | select( .name == "do not merge yet")' "$GITHUB_EVENT_PATH"
